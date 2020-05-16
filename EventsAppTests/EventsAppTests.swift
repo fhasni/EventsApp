@@ -22,6 +22,9 @@ class EventsAppTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let coreDataManager = CoreDataManager()
+        coreDataManager.saveEvent(name: "Birthday", date: Date(), image: #imageLiteral(resourceName: "birthday"))
+        print(coreDataManager.fetchEvents())
     }
 
     func testPerformanceExample() {
